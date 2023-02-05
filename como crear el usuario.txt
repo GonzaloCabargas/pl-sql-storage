@@ -1,0 +1,14 @@
+una vez conectado con SYSTEM, escribir los sgtes scripts en la hoja sql:
+
+--esto quita el error al crear un usuario
+alter sesion set "_oracle_script" = true;
+
+--aqui se crea el usuario llamado nombre_usuario(puede ser cualquier nombre)
+-- y luego se la asigna una contraseña entre comillas dobles "";
+create user nombre_usuario identified by "contraseña";
+
+--se le otorgan todos los privilegios al usuario
+grant all privileges to nombre_usuario;
+
+
+luego de esto, te conectas con el usuario y la contraseña que haz creado.
